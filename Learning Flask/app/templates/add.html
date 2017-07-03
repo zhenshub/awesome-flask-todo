@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add Todo</title>
+</head>
+<body>
+
+{% from "_formhelpers.html" import render_field %}
+<form action="/add" method=post>
+  <dl>
+    {{ render_field(form.content) }}
+    {{ render_field(form.time) }}
+    {{ render_field(form.status) }}
+  </dl>
+  <p><input type=submit value=addTodo>
+</form>
+
+
+</body>
+</html>

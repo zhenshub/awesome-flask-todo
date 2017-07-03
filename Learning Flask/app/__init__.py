@@ -1,9 +1,10 @@
 from flask import Flask
-from flask_mongoengine import MongoEngine
-
+from mongoengine import *
 
 app = Flask(__name__)
 app.config.from_object("config")
-db = MongoEngine(app)
+connect('localDB')
+
 
 from app import views, models
+
